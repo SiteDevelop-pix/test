@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Всё об имени Глеб</title>
+    <!-- Подключаем иконки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Общие стили и цвета */
+        :root {
+            --blue: #0057b7; /* Красивый синий */
+            --yellow: #ffd700; /* Яркий желтый */
+            --light-yellow: #fff9d6;
+            --dark: #222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--dark);
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        /* Шапка (Hero section) с анимацией */
+        header {
+            background: linear-gradient(135deg, var(--blue) 50%, var(--yellow) 50%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            position: relative;
+        }
+
+        .header-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
+            /* Анимация появления */
+            animation: fadeInDown 1.5s ease forwards;
+            opacity: 0;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header h1 span {
+            color: var(--yellow);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Иконка-корона с анимацией покачивания */
+        .main-icon {
+            font-size: 4rem;
+            color: var(--yellow);
+            margin-bottom: 20px;
+            animation: pulse 2s infinite alternate;
+        }
+
+        /* Секции лендинга */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            position: relative;
+            color: var(--blue);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--yellow);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Карточки с чертами характера */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border-top: 5px solid var(--blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Анимация при наведении на карточку */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-top-color: var(--yellow);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--blue);
+            margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+
+        .card:hover i {
+            color: var(--yellow);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Блок с происхождением */
+        .origin-block {
+            background-color: var(--light-yellow);
+            border-left: 8px solid var(--blue);
+            padding: 30px;
+            border-radius: 0 15px 15px 0;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* Подвал */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        footer i {
+            color: var(--yellow);
+        }
+
+        /* --- КЛЮЧЕВЫЕ КАДРЫ АНИМАЦИЙ (Keyframes) --- */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+                text-shadow: 0 0 10px rgba(255, 215, 0, 0);
+            }
+            to {
+                transform: scale(1.1);
+                text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            }
+        }
+
+        /* Адаптивность для мобилок */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            header p { font-size: 1.2rem; }
+            background: linear-gradient(135deg, var(--blue) 40%, var(--yellow) 60%);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Главный экран -->
+    <header>
+        <div class="header-content">
+            <i class="fa-solid fa-crown main-icon"></i> <!-- Кастомная иконка короны -->
+            <h1>Имя <span>Глеб</span></h1>
+            <p>Сила, мужество и верность традициям</p>
+        </div>
+    </header>
+
+    <!-- Происхождение -->
+    <section>
+        <h2 class="section-title">Происхождение имени</h2>
+        <div class="origin-block">
+            <p><strong>Глеб</strong> — сильное мужское имя с богатой историей. Наиболее популярная версия гласит, что оно произошло от древнескандинавского имени <em>Guðleifr</em>, что означает <strong>«любимец богов»</strong> или <strong>«под защитой богов»</strong>.</p>
+            <br>
+            <p>На Руси это имя появилось вместе с варягами и быстро прижилось, став княжеским. Первым русским святым (вместе с братом Борисом) стал именно князь Глеб.</p>
+        </div>
+    </section>
+
+    <!-- Характер / Фишки -->
+    <section style="background-color: #fff;">
+        <h2 class="section-title">Главные черты характера</h2>
+        <div class="grid">
+            
+            <!-- Карточка 1 -->
+            <div class="card">
+                <i class="fa-solid fa-shield-halved"></i> <!-- Иконка щита -->
+                <h3>Надежность</h3>
+                <p>Глеб всегда держит слово. На него можно положиться в любой трудной ситуации, он верный друг и защитник.</p>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="card">
+                <i class="fa-solid fa-brain"></i> <!-- Иконка мозга -->
+                <h3>Спокойствие</h3>
+                <p>Обладает рассудительным умом. Глеб редко паникует, предпочитая решать проблемы холодной головой.</p>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="card">
+                <i class="fa-solid fa-hammer"></i> <!-- Иконка молота -->
+                <h3>Трудолюбие</h3>
+                <p>Человек дела, а не пустых слов. Упорно идет к своим целям и мастерски справляется со сложными задачами.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Талисманы -->
+    <section>
+        <h2 class="section-title">Символы и талисманы</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <i class="fa-solid fa-gem"></i>
+                <h3>Камень-талисман</h3>
+                <p><strong>Яшма</strong> — приносит Глебу красноречие, твердость духа и охраняет от негатива.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-tree"></i>
+                <h3>Дерево имени</h3>
+                <p><strong>Дуб</strong> — символ долголетия, невероятной жизненной силы и мудрости.</p>
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-cloud-sun-rain"></i>
+                <h3>Планета</h3>
+                <p><strong>Юпитер</strong> — дарует масштабное мышление, авторитет и стремление к справедливости.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>Сайт про имя Глеб &copy; 2026. Сделано с <i class="fa-solid fa-heart"></i> и гордостью.</p>
+    </footer>
+
+</body>
+</html>
